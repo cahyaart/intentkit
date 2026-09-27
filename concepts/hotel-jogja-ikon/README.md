@@ -1,6 +1,6 @@
 # Hotel Jogja Ikon, Konsep Kawung
 
-Konsep arsitektur 3D untuk hotel tropis modern di Yogyakarta. Bahasa arsitektur gambar referensi disusun ulang menjadi model 3D yang utuh: massa asimetris, menara kaca tegak, kulit logam berlubang, bingkai atap yang tebal, porte-cochère, dan lansekap tropis. Hasilnya bukan salinan gambar 2D.
+Konsep arsitektur 3D untuk hotel 8 lantai dengan 134 kamar di kavling kota 1.300 m² di Yogyakarta. Kiri dan kanan kavling berbatasan langsung dengan bangunan tetangga, jadi hotel hanya punya satu muka, yaitu fasad depan. Bahasa arsitektur gambar referensi (bingkai gelap, sirip putih berlubang, panel emas berpola, kanopi tipis, lampu interior hangat) dipadatkan ke fasad selebar 26 m itu.
 
 ![Senja, dari seberang jalan](renders/01-senja-sudut-jalan.jpg)
 
@@ -8,60 +8,66 @@ Konsep arsitektur 3D untuk hotel tropis modern di Yogyakarta. Bahasa arsitektur 
 
 Buka `index.html` di browser modern (Chrome, Edge, Firefox, Safari). Model dibangun secara prosedural dengan Three.js r169 yang dimuat dari jsDelivr, jadi perlu koneksi internet. Tidak ada langkah build.
 
-- **Waktu:** Siang, Senja, Malam. Langit, matahari, lampu kamar, lampu taman, papan nama, kolam, dan cahaya sorot kulit kawung berubah bersama.
-- **Kamera:** Sudut jalan, Drop-off, Selasar, Udara, Tampak depan. Seret untuk memutar, gulir untuk zoom.
-- **Toggle:** Kulit kawung (tampilkan kaca di baliknya), Lansekap, Label (lantai dan elemen), Putar otomatis.
-- **Catatan desain:** panel berisi gagasan, program ruang, tipe kamar, strategi iklim, sirkulasi, dan material.
+- **Waktu:** Siang, Senja, Malam.
+- **Kamera:** Sudut jalan, Drop-off, Teras, Atap, Udara, Tampak depan.
+- **Toggle:** Kulit kawung (lepas untuk melihat loggia di baliknya), Lansekap, Label, Putar otomatis.
+- **Catatan desain:** data proyek, program, tipe kamar, tata lantai, fasad, sirkulasi, material.
+
+## Data proyek
+
+| | |
+|---|---|
+| Luas tanah | 1.300 m² (asumsi muka 26 m × kedalaman 50 m) |
+| Luas bangunan | ±6.650 m² di model (target 6.600 m²) |
+| Jumlah lantai | 8 |
+| Jumlah kamar | 134 |
+| KDB | ±80% (lantai dasar 1.040 m²) |
+| KLB | ±5,1 |
+| Tinggi puncak | ±30,6 m (lantai dasar 5,0 m, lantai kamar 3,3 m) |
 
 ## Gagasan
 
-Tiga lapis yang terbaca dari jalan:
-
-1. **Podium kaca** yang terbuka ke jalan: lobi dua lantai (8,4 m bersih), lobby lounge, dan restoran all-day dining dengan teras di selasar teduh sepanjang 40 m.
-2. **Bingkai gelap** hijau zaitun yang memayungi empat lantai kamar, dengan overhang atap 2,4 m dan sirip perforasi putih pada modul 5,0 m.
-3. **Kulit kawung** di sisi timur menara: panel aluminium champagne 19,2 × 18,0 m. Inilah "ikon" yang dimaksud nama hotel. Siang hari ia terlihat dari ujung jalan sebagai panel emas, malam hari ia menyala seperti lampion. Motifnya diambil dari batik kawung Yogyakarta (irisan buah aren). Bukaan perforasi bertahap dari ±18% di bawah hingga ±45% di puncak. Angka ini dihitung langsung dari pola yang dirender.
-
-Massa asimetris dari referensi dipertahankan: sayap kamar yang panjang dan tenang, dipertemukan dengan menara sudut yang tegak sebagai penanda lobi dan porte-cochère. Mahkota menara membawa papan nama "JOGJA IKON" yang menyala pada malam hari, dengan kolam renang atap dan sky lounge di baliknya.
+- **Satu muka, satu ikon.** Lima kolom kamar dibingkai bingkai hijau zaitun gelap dengan mahkota "JOGJA IKON" yang menjorok 2,0 m. Dua kolom kanan ditutup kulit kawung emas 6,8 × 24,6 m yang berdiri 1,8 m di depan kaca. Kulit ini menjadi ikon hotel: panel emas di siang hari, lampion raksasa di malam hari. Bukaan perforasinya bertahap dari ±17% di bawah hingga ±45% di puncak.
+- **Dinding samping masif.** Dinding kiri dan kanan tanpa bukaan, sesuai aturan dinding batas kavling. Bagian yang menjulang di atas atap tetangga diberi plester bertekstur dengan relief kawung dangkal.
+- **Massa U di atas podium.** Lantai 2 sampai 8 berbentuk U: blok depan 26 × 16,2 m, dua sayap 8 m menempel dinding batas, dan taman dalam 10 × 23,8 m di atas atap lantai dasar. Semua kamar yang tidak menghadap jalan mendapat cahaya dari taman ini.
 
 ## Program per lantai
 
-| Elevasi | Isi |
-|---|---|
-| ±0,00 | Lobi dua lantai dan resepsionis, lobby lounge, restoran all-day dining dengan teras di selasar |
-| +5,00 | Ruang meeting dan pre-function di sisi jalan, 8 kamar Deluxe di sisi utara |
-| +9,00 | 16 kamar Deluxe, 3 suite di menara |
-| +13,00 | 16 kamar Deluxe, 3 suite di menara |
-| +17,00 | 16 kamar Deluxe, sky lounge setinggi 5,8 m di menara menghadap Merapi |
-| Atap | Kolam renang dan dek kayu di atas menara, ±440 m² panel surya (±85 kWp) di atas sayap kamar |
-| Blok belakang | Inti lift dan tangga, dapur, laundry, gudang, ruang karyawan, spa dan gym |
+| Elevasi | Isi | Luas |
+|---|---|---|
+| ±0,00 | Lobi dan resepsionis, lounge, restoran all-day dining dengan teras, dapur, back-of-house | 1.040 m² |
+| +5,00 | 14 kamar, 2 ruang meeting, gym, taman dalam | ±802 m² |
+| +8,30 s.d. +24,80 | 6 lantai kamar tipikal, 20 kamar per lantai | ±802 m² per lantai |
+| +28,60 | Kolam renang, sky bar, ruang mesin lift, tandon, panel surya di atap sayap | – |
 
-Total ±62 kamar (56 Deluxe dan 6 Suite), luas lantai kotor ±4.850 m², puncak ±24,6 m.
+## Kamar (134)
 
-## Kamar
+| Tipe | Ukuran | Jumlah |
+|---|---|---|
+| Deluxe menghadap jalan | 3,6 × 7,2 m (±26 m²), 14 di antaranya dengan loggia di balik kulit kawung | 49 (7 per lantai, L2–L8) |
+| Family menghadap taman | 5,0 × 7,2 m (±36 m²) | 12 (2 per lantai, L3–L8) |
+| Superior menghadap taman | 3,6 × 6,4 m (±23 m²) | 73 (11 per lantai di L3–L8, 7 di L2) |
 
-- Deluxe ±32 m² pada modul fasad 5,0 m, koridor tengah, jendela kaca dari lantai ke plafon.
-- Sirip kawung putih di antara jendela menjaga privasi dari jalan dan membayangi kaca.
-- Suite ±55 m² di menara, dinding kaca penuh di sisi selatan dan timur, dengan kulit kawung sebagai tirai luar.
+Inti utama (2 lift tamu dan tangga) ada di pertemuan sayap kiri. Lift servis, linen, dan tangga darurat ada di pertemuan sayap kanan. Tangga darurat kedua ada di ujung sayap kiri. Koridor sayap menempel dinding batas.
 
-## Iklim, sirkulasi, lansekap
+## Sirkulasi dan parkir
 
-- Fasad panjang menghadap utara dan selatan. Sisi timur ditutup kulit kawung, sisi barat oleh dinding bingkai yang masif.
-- Kendaraan tamu satu arah: masuk lewat pos keamanan, turun di porte-cochère 12,6 × 14,5 m, lalu valet atau parkir timur, keluar lewat gerbang terpisah. Lantai porte-cochère rata dengan lobi.
-- Servis dan bongkar muat masuk ke blok belakang, terpisah dari jalur tamu. Pejalan kaki masuk lewat gerbang plaza sendiri. Trotoar menerus dengan ubin pemandu kuning dan zebra cross.
-- Pagar depan rendah (±0,9 m) agar restoran dan lobi terlihat dan mengundang dari jalan.
-- Palem raja di halaman depan, sepasang sawo kecik mengapit gerbang pejalan kaki, tanjung sebagai pohon jalan, ketapang kencana di parkir, pagar pucuk merah, dinding hijau di batas lahan.
-- Air hujan atap ke tandon bawah tanah, lubang biopori di area hijau, paving berpori di parkir, kaca low-E, LED dengan sensor cahaya siang.
+- Halaman depan sedalam 8 m berupa jalur satu arah: masuk dari kiri, turun di porte-cochère, keluar di kanan, searah lalu lintas lajur kiri.
+- Pejalan kaki masuk dari tengah lewat penyeberangan bermarka di jalur drop-off.
+- Kavling tidak cukup untuk parkir mobil 134 kamar di permukaan. Perlu basement atau valet ke lahan parkir lain. Keduanya belum dimodelkan.
+- Bongkar muat dan servis perlu akses belakang atau jadwal khusus di halaman depan, tergantung kondisi tapak sebenarnya.
 
 ## Material
 
 | Elemen | Material |
 |---|---|
-| Bingkai | Aluminium komposit hijau zaitun gelap |
+| Bingkai dan mahkota | Aluminium komposit hijau zaitun gelap |
 | Kulit kawung | Aluminium anodized champagne, perforasi CNC |
 | Sirip fasad | Aluminium perforasi putih |
 | Kaca | Laminated low-E, tint netral |
-| Plaza, dinding nama hotel | Batu andesit |
-| Plafon selasar dan porte-cochère, dinding lobi, dek kolam | Kayu jati |
+| Dinding samping | Plester bertekstur dengan relief kawung dangkal |
+| Pot tanaman, dinding nama | Batu andesit |
+| Plafon teras dan porte-cochère, dinding lobi, dek kolam | Kayu jati |
 | Interior (dari referensi kedua) | Lacquer hitam, putih doff berpanel anyaman kuningan, kursi oranye bata, lampu gantung drum |
 
 ## Render
@@ -70,15 +76,15 @@ Total ±62 kamar (56 Deluxe dan 6 Suite), luas lantai kotor ±4.850 m², puncak 
 |---|---|
 | ![Siang](renders/02-siang-sudut-jalan.jpg) | ![Malam](renders/03-malam-sudut-jalan.jpg) |
 | Siang, sudut jalan | Malam, sudut jalan |
-| ![Drop-off](renders/04-malam-drop-off.jpg) | ![Selasar](renders/05-senja-selasar.jpg) |
-| Porte-cochère dan lobi, malam | Teras restoran di selasar, senja |
-| ![Udara](renders/06-siang-udara.jpg) | ![Tampak depan](renders/07-siang-tampak-depan.jpg) |
-| Udara, siang (kolam atap di menara) | Tampak depan |
-| ![Tanpa kulit](renders/08-siang-tanpa-kulit.jpg) | |
-| Kulit kawung dilepas, kaca suite terlihat | |
+| ![Drop-off](renders/04-malam-drop-off.jpg) | ![Teras](renders/05-senja-teras.jpg) |
+| Porte-cochère dan lobi, malam | Teras restoran, senja |
+| ![Atap](renders/06-senja-atap.jpg) | ![Udara](renders/07-siang-udara.jpg) |
+| Kolam dan sky bar di atap, senja | Udara: massa U, dinding samping, tetangga |
+| ![Tampak depan](renders/08-siang-tampak-depan.jpg) | ![Tanpa kulit](renders/09-siang-tanpa-kulit.jpg) |
+| Tampak depan | Kulit kawung dilepas, loggia kamar terlihat |
 
 Render diambil dari model yang sama (Chromium headless, SwiftShader), jadi kualitasnya setara tampilan di browser, bukan render fotorealistik.
 
 ## Catatan
 
-Ini model konsep berskala. Jumlah kamar, luas, dan dimensi bersifat indikatif dan perlu diverifikasi terhadap KDB, KLB, GSB, peraturan daerah setempat, dan standar operator hotel sebelum pengembangan desain. Papan nama final sebaiknya disertai aksara Jawa sesuai kebiasaan penanda bangunan di Yogyakarta.
+Model konsep berskala. Ukuran kavling 26 × 50 m adalah asumsi dan perlu disesuaikan dengan ukuran sebenarnya. KDB, KLB, batas ketinggian, GSB, dinding batas, dan kebutuhan parkir perlu diverifikasi terhadap RDTR dan peraturan Kota Yogyakarta, serta standar operator hotel. Papan nama final sebaiknya disertai aksara Jawa sesuai kebiasaan penanda bangunan di Yogyakarta.
