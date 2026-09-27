@@ -223,6 +223,7 @@
       <li><span>Kamar</span>134</li>
       <li><span>Tanah</span>1.300 m²</li>
       <li><span>Bangunan</span>±6.600 m²</li>
+      <li><span>Parkir basement</span><b data-park="cars">40</b> mobil, <b data-park="moto">48</b> motor</li>
     </ul>
     <p class="hint">Seret untuk memutar, gulir atau cubit untuk zoom, klik kanan untuk menggeser.</p>
   </section>
@@ -264,12 +265,16 @@
       <div><dt>KLB</dt><dd>±5,1</dd></div>
       <div><dt>Tinggi puncak</dt><dd>±30,6 m</dd></div>
       <div><dt>Kavling (asumsi)</dt><dd>26 × 50 m</dd></div>
+      <div><dt>Basement</dt><dd>2 lantai, ±2.450 m²</dd></div>
+      <div><dt>Parkir</dt><dd><span data-park="cars">40</span> mobil, <span data-park="moto">48</span> motor</dd></div>
     </dl>
   </section>
   <section>
     <h3>Program per lantai</h3>
     <dl class="levels">
-      <div><dt>±0,00</dt><dd>Lobi dan resepsionis, lounge, restoran all-day dining dengan teras, dapur, back-of-house, ruang karyawan (1.040 m²)</dd></div>
+      <div><dt>−6,60</dt><dd>Basement 2: <span data-park="b2">20</span> mobil, parkir motor, ruang pompa dan tandon air, STP, panel listrik</dd></div>
+      <div><dt>−3,40</dt><dd>Basement 1: <span data-park="b1">20</span> mobil, parkir motor, ramp ke B2</dd></div>
+      <div><dt>±0,00</dt><dd>Lobi dan resepsionis, lounge, restoran all-day dining dengan teras, dapur, back-of-house, dua portal ramp basement (1.040 m²)</dd></div>
       <div><dt>+5,00</dt><dd>14 kamar, 2 ruang meeting, gym, taman dalam di atas atap lantai dasar</dd></div>
       <div><dt>+8,30 s.d. +24,80</dt><dd>6 lantai kamar tipikal, 20 kamar per lantai (±802 m²)</dd></div>
       <div><dt>+28,60</dt><dd>Kolam renang, sky bar, ruang mesin lift, tandon, panel surya di atap sayap</dd></div>
@@ -288,7 +293,7 @@
     <h3>Tata lantai tipikal</h3>
     <ul>
       <li>Massa U: blok depan 26 × 16,2 m, dua sayap 8 m di sepanjang dinding batas, taman dalam 10 × 23,8 m.</li>
-      <li>Inti utama (2 lift tamu dan tangga) di pertemuan sayap kiri. Lift servis, linen, dan tangga darurat di pertemuan sayap kanan. Tangga darurat kedua di ujung sayap kiri.</li>
+      <li>Inti tamu (2 lift dan tangga) di sisi kanan, langsung dari lobi. Inti servis (lift servis, linen, tangga darurat) di sisi kiri dekat dapur. Keduanya turun sampai B2. Tangga darurat ketiga di ujung sayap kiri.</li>
       <li>Koridor sayap menempel dinding batas, sehingga semua kamar sayap menghadap taman.</li>
     </ul>
   </section>
@@ -307,8 +312,19 @@
     <ul>
       <li>Halaman depan 8 m: jalur satu arah masuk dari kiri, turun di porte-cochère, keluar di kanan, searah lalu lintas lajur kiri.</li>
       <li>Pejalan kaki masuk dari tengah dan menyeberangi jalur drop-off lewat penyeberangan bermarka.</li>
-      <li>Kavling tidak cukup untuk parkir mobil 134 kamar di permukaan. Perlu basement atau valet ke lahan parkir lain. Keduanya belum dimodelkan.</li>
       <li>Bongkar muat dan servis perlu akses belakang atau jadwal khusus di halaman depan, sesuai kondisi tapak sebenarnya.</li>
+    </ul>
+  </section>
+  <section>
+    <h3>Parkir basement</h3>
+    <ul>
+      <li>Dua lantai basement di bawah seluruh kavling (±25,2 × 48,6 m per lantai, ±94% luas tanah). Lantai B1 di −3,40 dan B2 di −6,60, tinggi bersih ±2,5 m.</li>
+      <li>Ramp satu arah selebar 3,5 m di sepanjang kedua dinding batas, kemiringan ±15%. Ramp turun di kiri searah jalur masuk; ramp naik di kanan langsung ke jalur keluar di bawah porte-cochère.</li>
+      <li>B1 ke B2 lewat ramp dua arah selebar 6 m di sepanjang dinding belakang, kemiringan ±14%.</li>
+      <li>Tiap lantai: lajur tengah dua arah 7,8 m, petak mobil 2,5 × 5,0 m dengan stopper roda, deret motor di belakang. Total <span data-park="cars">40</span> mobil dan <span data-park="moto">48</span> motor, atau ±<span data-park="ratio">0,30</span> mobil per kamar.</li>
+      <li>Lift tamu dan lift servis turun sampai B2, sehingga tamu naik langsung ke lobi atau lantai kamar.</li>
+      <li>Jika aturan meminta lebih banyak petak, pilihannya parkir susun mekanis 2 tingkat di B2 (lantai B2 perlu lebih tinggi), basement ketiga, atau valet ke lahan lain.</li>
+      <li>Perlu dicek: koefisien tapak basement (KTB), muka air tanah dan dewatering, dan apakah 6.600 m² sudah termasuk basement.</li>
     </ul>
   </section>
   <section>
@@ -350,6 +366,11 @@
     <button data-view="roof" aria-pressed="false">Atap</button>
     <button data-view="aerial" aria-pressed="false">Udara</button>
     <button data-view="front" aria-pressed="false">Tampak depan</button>
+  </div>
+  <div class="seg glass" role="group" aria-label="Basement">
+    <span class="seg-label">Basement</span>
+    <button data-view="b1" aria-pressed="false" aria-label="Basement 1">B1</button>
+    <button data-view="b2" aria-pressed="false" aria-label="Basement 2">B2</button>
   </div>
 </footer>
 
@@ -441,6 +462,8 @@ const VIEWS = {
   roof:    { pos: [-11.6, 30.4, 5.4], tgt: [3, 28.9, -3.5], fov: 62 },
   aerial:  { pos: [-50, 66, 72],     tgt: [0, 11, -12],   fov: 38 },
   front:   { pos: [0, 15.5, 39.6],   tgt: [0, 15.5, 0],   fov: 54 },
+  b1:      { pos: [-30, 24, 30],     tgt: [0, -3.4, -8],  fov: 46 },
+  b2:      { pos: [-30, 22, 30],     tgt: [0, -6.6, -8],  fov: 46 },
 };
 
 function main() {
@@ -820,6 +843,8 @@ function main() {
     iteak: std({ color: 0x000000, emissive: 0xffffff, emissiveMap: T.teak, roughness: 1 }, { k: 0.6, cast: false }),
     orange: std({ color: 0xb5541f, roughness: 0.6 }),
     party: std({ map: T.party, roughness: 0.95 }, { uv: 6 }),
+    concrete: std({ color: 0xa9a7a1, roughness: 0.95 }),
+    bfloor: std({ color: 0xc9ccce, map: T.asphalt, roughness: 0.7 }, { uv: 6 }),
     linen: std({ color: 0xf1efe9, roughness: 0.9 }, { cast: false }),
     curtain: std({ color: 0xd9cdb8, roughness: 1, emissive: 0xffd7a8 }, { k: 0.35, cast: false }),
     winLit: std({ color: 0x1d262b, roughness: 0.15, metalness: 0.6, emissive: 0xffcf94 }, { k: 0.55 }),
@@ -860,7 +885,7 @@ function main() {
 
   /* ---------- geometry buckets (merged per material) ---------- */
   const groups = {};
-  for (const k of ['building', 'skin', 'site', 'landscape', 'entourage', 'context']) {
+  for (const k of ['building', 'skin', 'site', 'landscape', 'entourage', 'context', 'bshell', 'b1', 'b2', 'ghost']) {
     groups[k] = new THREE.Group(); scene.add(groups[k]);
   }
   const buckets = new Map();
@@ -1004,29 +1029,38 @@ function main() {
   box(M.icore, 12.55, 12.6, 5.0, ROOF, 0.8, 7.95);
 
   // ground floor: all-day dining (left) and lobby (right) behind a 2,5 m terrace
-  box(M.glass, X0, 12.6, 0.15, 4.45, 5.47, 5.5);
-  for (let x = X0; x <= 12.7; x += 1.8) box(M.mullion, x - 0.04, x + 0.04, 0.15, 4.45, 5.5, 5.6);
-  box(M.mullion, X0, 12.6, 3.2, 3.26, 5.5, 5.58);
-  for (const x of [5.4, 7.2, 9.0]) box(M.mullion, x - 0.07, x + 0.07, 0.15, 3.2, 5.5, 5.64);
+  box(M.glass, -8.9, 8.9, 0.15, 4.45, 5.47, 5.5);
+  for (let x = -8.9; x <= 8.95; x += 1.78) box(M.mullion, x - 0.04, x + 0.04, 0.15, 4.45, 5.5, 5.6);
+  box(M.mullion, -8.9, 8.9, 3.2, 3.26, 5.5, 5.58);
+  for (const x of [5.2, 7.0, 8.8]) box(M.mullion, x - 0.07, x + 0.07, 0.15, 3.2, 5.5, 5.64);
+  // basement ramp tunnels behind the two portals (down on the left, up on the right)
+  for (const [w0, w1, lx0, lx1, c0, c1] of [[-9.1, -8.9, -9.13, -9.1, -13, -9.1], [8.9, 9.1, 9.1, 9.13, 9.1, 13]]) {
+    box(M.white, w0, w1, 0, 4.6, -17.5, 5.5);
+    box(M.concrete, c0, c1, 4.6, 5.0, -17.5, 5.5);
+    for (let z = -15; z < 4; z += 3.2) box(M.lamp, lx0, lx1, 3.2, 3.3, z, z + 1.4);
+  }
   box(M.white, -13, -12.6, 0.0, 4.6, 5.0, 10.0);
   box(M.white, 12.6, 13, 0.0, 4.6, 5.0, 10.2);
-  box(M.ifloor, X0, 12.6, -0.1, 0.15, -6, 5.45);
-  box(M.iceil, X0, 12.6, 4.1, 4.5, -6, 5.45);
-  iwall(M.iwall, X0, 1.8, -6, 0.15, 3.95, 'z');
-  iwall(M.iteak, 1.8, 12.6, -6, 0.15, 3.95, 'z', 1.2, 1.2);
+  box(M.ifloor, -8.9, 8.9, -0.1, 0.15, -6, 5.45);
+  box(M.iceil, -8.9, 8.9, 4.1, 4.5, -6, 5.45);
+  iwall(M.iwall, -8.9, 1.8, -6, 0.15, 3.95, 'z');
+  iwall(M.iteak, 1.8, 8.9, -6, 0.15, 3.95, 'z', 1.2, 1.2);
   box(M.icore, 1.7, 1.9, 0.15, 4.1, -6, 3.4);
+  box(M.white, -8.9, -5, 0.15, 4.1, -6, -1);                    // service core + kitchen pass
+  box(M.teak, 5, 8.9, 0.15, 4.1, -6, -1);                       // guest lift core in the lobby
+  for (const zc of [-4.8, -2.4]) box(M.steel, 4.96, 5.0, 0.15, 2.4, zc - 0.55, zc + 0.55);
   box(M.teak, -13, 13, 4.5, 4.6, 5.5, 10.0);                    // teak soffit over the terrace
-  for (const x of [-9.0, -1.8, 5.4]) cyl(M.white, x, 0.15, 4.5, 8.0, 0.26, 0.26, 20);
-  box(M.white, 7.4, 11.6, 0.15, 1.1, -3.6, -2.7);               // reception
-  box(M.gold, 7.4, 11.6, 0.3, 0.95, -2.7, -2.67);
-  box(M.white, 3.0, 6.6, 0.15, 0.95, -5.9, -5.4);               // credenza with brass mesh
-  box(M.gold, 3.2, 6.4, 0.3, 0.8, -5.4, -5.37);
-  for (const [x, z] of [[4.4, 1.2], [8, -0.8], [11, 2.2]]) {
+  for (const x of [-5.0, 1.8, 5.4]) cyl(M.white, x, 0.15, 4.5, 8.0, 0.26, 0.26, 20);
+  box(M.white, 2.3, 4.6, 0.15, 1.1, -3.4, -2.6);                // reception
+  box(M.gold, 2.3, 4.6, 0.3, 0.95, -2.6, -2.57);
+  box(M.white, 2.1, 4.7, 0.15, 0.95, -5.9, -5.4);               // credenza with brass mesh
+  box(M.gold, 2.3, 4.5, 0.3, 0.8, -5.4, -5.37);
+  for (const [x, z] of [[3.4, 1.2], [6.8, 1.4], [5.0, 3.6]]) {
     cyl(M.spandrel, x, 3.2, 3.6, z, 0.6, 0.6, 24);
     box(M.lamp, x - 0.4, x + 0.4, 3.18, 3.2, z - 0.4, z + 0.4);
     cyl(M.spandrel, x, 3.6, 4.1, z, 0.012, 0.012, 4);
   }
-  for (const [x, z, r] of [[3.6, 3.2, 0.4], [5.0, 3.9, -0.3], [10.8, 3.6, 2.8]]) {
+  for (const [x, z, r] of [[3.4, 3.3, 0.4], [4.7, 4.1, -0.3], [7.6, 3.6, 2.8]]) {
     const g = new THREE.SphereGeometry(0.55, 18, 12, 0, Math.PI * 2, 0, Math.PI * 0.62);
     g.rotateX(Math.PI * 0.62); g.rotateY(r); g.translate(x, 0.75, z);
     add(g, M.orange, 'building');
@@ -1039,14 +1073,16 @@ function main() {
       box(M.orange, x + dx + (dx > 0 ? 0.16 : -0.22), x + dx + (dx > 0 ? 0.22 : -0.16), y + 0.45, y + 0.85, z - 0.22, z + 0.22);
     }
   }
-  for (const x of [-11.2, -5.4, 0.2]) cafeTable(x, 7.0);
-  for (const [x, z] of [[-10, 1.5], [-6, 1.5], [-2, 1.5], [-10, -2.5], [-6, -2.5]]) cafeTable(x, z);
+  for (const x of [-7.2, -2.8, 0.2]) cafeTable(x, 7.0);
+  for (const [x, z] of [[-7.2, 1.8], [-3.8, 1.8], [-0.6, 1.8], [-2.6, -3.0]]) cafeTable(x, z);
 
   // corridor / core zone and the two wings around the garden court (seen from above)
   box(M.white, -13, 13, 5.0, ROOF, -8.2, 0.75);
   box(M.white, -13, -5, 5.0, DECK, -32, -8.2);
   box(M.white, 5, 13, 5.0, DECK, -32, -8.2);
-  box(M.white, -13, 13, 0, 5.0, -32, -6.05);
+  box(M.white, -8.9, 8.9, 0, 5.0, -32, -6.05);
+  box(M.white, -13, -8.9, 0, 5.0, -32, -17.5);
+  box(M.white, 8.9, 13, 0, 5.0, -32, -17.5);
   for (const L of LV) {
     for (let j = 0; j < 6; j++) {
       const zc = -10.4 - MOD * j;
@@ -1076,7 +1112,8 @@ function main() {
     g.rotateX(0.12); g.translate(x, DECK + 0.42, 3.4); add(g, M.white);
     box(M.steel, x - 0.3, x + 0.3, DECK + 0.12, DECK + 0.33, 2.6, 4.2);
   }
-  box(M.white, -13, -6.6, DECK, DECK + 3.0, -8.2, -3.0);       // lift overrun + stair head
+  box(M.white, -9, -5, DECK, DECK + 3.0, -8.2, -3.4);         // service lift overrun
+  box(M.white, 5, 9, DECK, DECK + 3.2, -8.2, -3.4);           // guest lift overrun
   for (const [x, z] of [[-12.3, -2.3], [-6.9, -2.3], [-12.3, 5.9], [-6.9, 5.9]]) cyl(M.steel, x, DECK + 0.12, DECK + 2.8, z, 0.07);
   for (let z = -2.3; z < 6; z += 0.45) box(M.teak, -12.5, -6.7, DECK + 2.8, DECK + 2.92, z, z + 0.12);
   for (let z = -1.8; z < 6; z += 1.3) box(M.lamp, -9.64, -9.56, DECK + 2.66, DECK + 2.74, z, z + 0.08);
@@ -1084,7 +1121,7 @@ function main() {
   box(M.gold, -11.33, -11.3, DECK + 0.3, DECK + 0.95, -1.6, 5.2);
   box(M.glass, -6.6, 5.4, DECK + 0.12, DECK + 1.2, -8.25, -8.2);
   box(M.glass, 5.2, 5.26, DECK + 0.12, DECK + 1.2, -8.2, 6.4);
-  for (const [x, z] of [[7.6, -5.4], [10.4, -5.4]]) cyl(M.white, x, DECK, DECK + 2.2, z, 1.1, 1.1, 20);   // water tanks
+  for (const [x, z] of [[11.0, -5.2], [11.0, -2.2]]) cyl(M.white, x, DECK, DECK + 2.2, z, 1.1, 1.1, 20);   // water tanks
   for (let x = 6.4; x < 12.4; x += 1.4) box(M.steel, x, x + 1.0, DECK, DECK + 0.9, 1.4, 2.4);         // AC condensers
   for (let z = -30.6; z < -10; z += 2.2) {                       // PV on both wing roofs, tilted to the north
     for (const xc of [-9, 9]) {
@@ -1110,6 +1147,21 @@ function main() {
   ikonMesh.position.set(-3.8, 28.9, 10.03);
   groups.building.add(ikonMesh);
 
+  // "P" signs over the two ramp portals
+  {
+    const c = mk(128, 128), g = c.getContext('2d');
+    g.fillStyle = '#1f4f9a'; g.fillRect(0, 0, 128, 128);
+    g.fillStyle = '#fff'; g.font = '800 104px "Big Shoulders Display", "Arial Narrow", sans-serif';
+    g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('P', 64, 70);
+    const t = tex(c, { repeat: false });
+    M.psign = std({ map: t, emissive: 0xffffff, emissiveMap: t, emissiveIntensity: 0.1, roughness: 0.5 }, { cast: false });
+    for (const x of [-10.85, 10.85]) {
+      const sgn = new THREE.Mesh(new THREE.PlaneGeometry(0.6, 0.6), M.psign);
+      sgn.position.set(x, 4.9, 10.02);
+      groups.building.add(sgn);
+    }
+  }
+
   // porte-cochère over the drop-off lane
   box(M.canopy, 0.6, 12.9, 4.3, 4.62, 10.0, 14.6);
   box(M.teak, 0.65, 12.85, 4.24, 4.3, 10.0, 14.55);
@@ -1121,7 +1173,11 @@ function main() {
   /* =========================================================
      SITE: street, forecourt, neighbours
      ========================================================= */
-  box(M.grass, -2400, 2400, -0.2, 0, -2400, 2400, 'site');
+  box(M.grass, -2400, -13, -0.2, 0, -2400, 2400, 'site');
+  box(M.grass, 13, 2400, -0.2, 0, -2400, 2400, 'site');
+  box(M.grass, -13, 13, -0.2, 0, 16, 2400, 'site');
+  box(M.grass, -13, 13, -0.2, 0, -2400, -34, 'site');
+  box(M.paving, -13, 13, 0, 0.05, -34, -32, 'site');              // rear service yard
   box(M.asphalt, -2400, 2400, 0, 0.02, 22, 36, 'site');
   for (let x = -600; x < 600; x += 9) box(M.marking, x, x + 4.5, 0.02, 0.03, 28.9, 29.1, 'site');
   box(M.marking, -600, 600, 0.02, 0.03, 22.35, 22.5, 'site');
@@ -1135,8 +1191,11 @@ function main() {
   box(M.tactile, -2400, 2400, 0.18, 0.19, 39.6, 39.9, 'site');
 
   // forecourt: one-way lane, in on the left, out on the right (left-hand traffic)
-  box(M.paving, -13, 13, 0, 0.15, 5.0, 10.0, 'site');           // terrace
-  box(M.andesite, -13, 13, 0, 0.17, 9.85, 10.0, 'site');
+  box(M.paving, -8.9, 8.9, 0, 0.15, 5.0, 10.0, 'site');         // terrace
+  box(M.andesite, -8.9, 8.9, 0, 0.17, 9.85, 10.0, 'site');
+  box(M.drive, -13, -8.9, 0, 0.02, 5.5, 10.0, 'site');           // ramp approaches
+  box(M.drive, 8.9, 13, 0, 0.02, 5.5, 10.0, 'site');
+  for (const x of [-10.85, 10.85]) box(M.tactile, x - 1.75, x + 1.75, 0.02, 0.1, 7.4, 7.9, 'site');   // speed humps
   box(M.drive, -13, 13, 0, 0.06, 10.0, 16.0, 'site');
   for (let z = 10.4; z < 15; z += 0.9) box(M.marking, 1.3, 3.7, 0.06, 0.07, z, z + 0.45, 'site');
   box(M.andesite, -7.5, 1.2, 0, 0.55, 15.2, 16.1, 'site');
@@ -1181,14 +1240,14 @@ function main() {
   }
   for (const x of [-60, -40, -21, 17, 36, 56]) lampPost(x, 21.2, 0.18);
   for (const x of [-52, -30, 30, 52]) lampPost(x, 37.2, 0.18);
-  for (const x of [-12.4, -8, 8.4, 12.4]) {
+  for (const x of [-8.4, -4.2, 4.2, 8.4]) {
     cyl(M.frame, x, 0.15, 0.85, 9.6, 0.09, 0.09, 10, 'site');
     cyl(M.lamp, x, 0.85, 0.98, 9.6, 0.1, 0.1, 10, 'site');
     pool(x, 9.6, 0.17, 1.6);
   }
   pool(6.6, 12.3, 0.08, 7);
   pool(-4, 7.6, 0.17, 5);
-  pool(-10, 7.6, 0.17, 4);
+  pool(-7, 7.6, 0.17, 4);
 
   // neighbours: shophouses (ruko) on both sides and across the street, low houses behind
   function ruko(x0, x1, h, zf, depth, face) {
@@ -1354,15 +1413,15 @@ function main() {
     const h = new THREE.SphereGeometry(0.1, 12, 8); h.translate(0, 1.5, 0); h.scale(s, s, s); h.translate(x, y, z);
     push(h, R() < 0.35 ? hijab[(R() * hijab.length) | 0] : M.skin, 'entourage');
   }
-  [[4.2, 9.0, 0.15], [4.9, 9.3, 0.15], [9.8, 9.1, 0.15], [2.2, 12.6, 0.06], [-3.2, 8.9, 0.15], [-6.2, 6.3, 0.15],
-   [-4.2, 7.9, 0.15], [8.8, 1.6, 0.15], [9.6, -2.1, 0.15], [5.4, 2.8, 0.15], [-8, 0.2, 0.15], [-3.4, -1.2, 0.15],
+  [[4.2, 9.0, 0.15], [4.9, 9.3, 0.15], [8.0, 9.2, 0.15], [2.2, 12.6, 0.06], [-3.2, 8.9, 0.15], [-6.2, 6.3, 0.15],
+   [-4.2, 7.9, 0.15], [7.6, 2.2, 0.15], [4.0, -0.6, 0.15], [5.4, 2.8, 0.15], [-8, 0.2, 0.15], [-3.4, -1.2, 0.15],
    [-24, 18.6, 0.18], [-23.2, 19.1, 0.18], [-9, 18.4, 0.18], [3, 19.0, 0.18], [3.6, 19.4, 0.18], [20, 18.9, 0.18], [33, 18.2, 0.18],
    [-30, 38.2, 0.18], [-31, 38.9, 0.18], [22, 38.6, 0.18]].forEach(([x, z, y]) => person(x, z, y));
   for (const [x, z] of [[-9.6, 0], [-8.6, 0.8], [-2, 4.9], [2.4, -4.6]]) person(x, z, DECK + 0.12);
 
-  function car(x, z, rot, mat, y = 0.06) {
+  function car(x, z, rot, mat, y = 0.06, group = 'entourage') {
     const m = new THREE.Matrix4().makeRotationY(rot).setPosition(x, y, z);
-    const part = (g, mm) => add(g, mm, 'entourage', m);
+    const part = (g, mm) => add(g, mm, group, m);
     let g = new THREE.BoxGeometry(4.5, 0.72, 1.84); g.translate(0, 0.72, 0); part(g, mat);
     g = new THREE.BoxGeometry(2.5, 0.62, 1.66); g.translate(-0.3, 1.39, 0); part(g, M.carGlass);
     g = new THREE.BoxGeometry(2.3, 0.07, 1.6); g.translate(-0.3, 1.73, 0); part(g, mat);
@@ -1374,9 +1433,9 @@ function main() {
       g = new THREE.BoxGeometry(0.06, 0.12, 0.34); g.translate(-2.25, 0.9, s * 0.62); part(g, M.tail);
     }
   }
-  function bike(x, z, rot, mat) {
-    const m = new THREE.Matrix4().makeRotationY(rot).setPosition(x, 0.18, z);
-    const part = (g, mm) => add(g, mm, 'entourage', m);
+  function bike(x, z, rot, mat, y = 0.18, group = 'entourage') {
+    const m = new THREE.Matrix4().makeRotationY(rot).setPosition(x, y, z);
+    const part = (g, mm) => add(g, mm, group, m);
     let g = new THREE.BoxGeometry(1.4, 0.32, 0.26); g.translate(0, 0.6, 0); part(g, mat);
     g = new THREE.BoxGeometry(0.7, 0.1, 0.28); g.translate(-0.2, 0.82, 0); part(g, M.tire);
     g = new THREE.BoxGeometry(0.06, 0.06, 0.62); g.translate(0.58, 1.0, 0); part(g, M.steel);
@@ -1384,12 +1443,143 @@ function main() {
   }
   car(6.8, 12.6, 0, paint[0]);
   car(-5.5, 12.9, 0, paint[5]);
+  car(-10.85, 8.3, Math.PI / 2, paint[2], 0.02);
   car(-26, 25.6, 0, paint[1], 0.02);
   car(12, 32.4, Math.PI, paint[4], 0.02);
   car(48, 25.6, 0, paint[3], 0.02);
   for (let k = 0; k < 9; k++) bike(-24 - k * 0.9, 16.9, Math.PI / 2 + rr(-0.15, 0.15), cloth[(k * 3) % cloth.length]);
   for (let k = 0; k < 7; k++) bike(18 + k * 0.9, 16.9, Math.PI / 2 + rr(-0.15, 0.15), cloth[(k * 5 + 1) % cloth.length]);
   for (let k = 0; k < 8; k++) bike(-10 + k * 0.9, 40.2, Math.PI / 2 + rr(-0.15, 0.15), cloth[(k * 2) % cloth.length]);
+
+  /* =========================================================
+     BASEMENT PARKING, two levels under the whole lot
+     B1 −3,40, B2 −6,60. One-way ramps along both party walls
+     (down on the entry side, up on the exit side), a two-way
+     B1–B2 ramp along the rear wall, lifts down to B2.
+     ========================================================= */
+  const B1 = -3.4, B2 = -6.6, BZ0 = -33, BZ1 = 15.6, RZ = -17.5;
+  const park = { b1: 0, b2: 0, moto: 0 };
+
+  function rampZ(x0, x1, zTop, yTop, zBot, yBot, mat, group) {
+    const dz = zTop - zBot, dy = yTop - yBot, th = Math.atan2(dy, dz);
+    const g = new THREE.BoxGeometry(x1 - x0, 0.3, Math.hypot(dz, dy));
+    g.translate(0, -0.15, 0); g.rotateX(-th); g.translate((x0 + x1) / 2, (yTop + yBot) / 2, (zTop + zBot) / 2);
+    add(g, mat, group);
+  }
+  function rampX(xTop, yTop, xBot, yBot, z0, z1, mat, group) {
+    const dx = xTop - xBot, dy = yTop - yBot, a = Math.atan2(dy, dx);
+    const g = new THREE.BoxGeometry(Math.hypot(dx, dy), 0.3, z1 - z0);
+    g.translate(0, -0.15, 0); g.rotateZ(a); g.translate((xTop + xBot) / 2, (yTop + yBot) / 2, (z0 + z1) / 2);
+    add(g, mat, group);
+  }
+  // stalls 2,5 × 5,0 m; `nose` is the wall side the cars face
+  function stallsAlongZ(x0, x1, zA, zB, y, grp, key, nose) {
+    const n = Math.floor((zB - zA) / 2.5 + 1e-6);
+    for (let i = 0; i <= n; i++) box(M.marking, x0, x1, y, y + 0.012, zA + i * 2.5 - 0.05, zA + i * 2.5 + 0.05, grp);
+    const wall = nose < 0 ? x0 : x1, s = nose < 0 ? 1 : -1;
+    for (let i = 0; i < n; i++) {
+      const zc = zA + i * 2.5 + 1.25;
+      box(M.tactile, Math.min(wall + s * 0.6, wall + s * 0.75), Math.max(wall + s * 0.6, wall + s * 0.75), y, y + 0.12, zc - 0.7, zc + 0.7, grp);
+      if (R() < 0.8) car((x0 + x1) / 2 + s * 0.1, zc, nose < 0 ? Math.PI : 0, paint[(R() * paint.length) | 0], y, grp);
+      park[key]++;
+    }
+  }
+  function stallsAlongX(z0, z1, xA, xB, y, grp, key) {       // cars nose toward +z (front wall)
+    const n = Math.floor((xB - xA) / 2.5 + 1e-6), w = (xB - xA) / n;
+    for (let i = 0; i <= n; i++) box(M.marking, xA + i * w - 0.05, xA + i * w + 0.05, y, y + 0.012, z0, z1, grp);
+    for (let i = 0; i < n; i++) {
+      const xc = xA + i * w + w / 2;
+      box(M.tactile, xc - 0.7, xc + 0.7, y, y + 0.12, z1 - 0.75, z1 - 0.6, grp);
+      if (R() < 0.8) car(xc, (z0 + z1) / 2 + 0.1, -Math.PI / 2, paint[(R() * paint.length) | 0], y, grp);
+      park[key]++;
+    }
+  }
+  function motoRow(x0, x1, z0, z1, y, grp) {
+    box(M.tactile, x0, x1, y, y + 0.012, z1 - 0.06, z1, grp);
+    for (let x = x0 + 0.4; x < x1 - 0.3; x += 0.8) {
+      if (R() < 0.85) bike(x, (z0 + z1) / 2, Math.PI / 2 + rr(-0.1, 0.1), cloth[(R() * cloth.length) | 0], y, grp);
+      park.moto++;
+    }
+  }
+
+  // shell: retaining walls, rear ramp, cores with lift doors
+  box(M.concrete, -13, -12.6, B2 - 0.4, -0.1, -33.4, 16, 'bshell');
+  box(M.concrete, 12.6, 13, B2 - 0.4, -0.1, -33.4, 16, 'bshell');
+  box(M.concrete, -12.6, 12.6, B2 - 0.4, -0.1, BZ1, 16, 'bshell');
+  box(M.concrete, -12.6, 12.6, B2 - 0.4, -0.1, -33.4, BZ0, 'bshell');
+  rampX(11.6, B1, -11.6, B2, BZ0, -27, M.drive, 'bshell');
+  for (let x = -10; x < 11; x += 3) box(M.marking, x, x + 1.5, 0, 0.01, -30.05, -29.95, 'bshell');
+  for (const [x0, x1, face, name] of [[-9, -5, 1, 'servis'], [5, 9, -1, 'tamu']]) {
+    box(M.concrete, x0, x1, B2, -0.1, -8.2, -1, 'bshell');
+    const fx = face > 0 ? x1 + 0.02 : x0 - 0.02;
+    for (const L of [B1, B2]) for (const zc of name === 'tamu' ? [-6.2, -4.2] : [-5.2]) {
+      box(M.steel, fx - 0.02, fx + 0.02, L, L + 2.2, zc - 0.55, zc + 0.55, 'bshell');
+    }
+  }
+
+  // ceiling of B1 under the ground floor and forecourt (open over the two ramps)
+  box(M.concrete, -9.1, 9.1, -0.4, -0.1, BZ0, BZ1, 'building');
+  for (const [x0, x1] of [[-12.6, -9.1], [9.1, 12.6]]) {
+    box(M.concrete, x0, x1, -0.4, -0.1, BZ0, RZ, 'building');
+    box(M.concrete, x0, x1, -0.4, -0.1, 5.5, BZ1, 'building');
+  }
+
+  // ---- B1
+  box(M.bfloor, -12.6, 12.6, B1 - 0.3, B1, -27, BZ1, 'b1');
+  box(M.bfloor, 9.6, 12.6, B1 - 0.3, B1, BZ0, -27, 'b1');
+  rampZ(-12.6, -9.1, 5.5, 0, RZ, B1, M.drive, 'b1');           // down from the street (entry side)
+  rampZ(9.1, 12.6, 5.5, 0, RZ, B1, M.drive, 'b1');             // up to the street (exit side)
+  box(M.concrete, -9.1, -8.9, B1, -0.4, RZ, 5.5, 'b1');
+  box(M.concrete, 8.9, 9.1, B1, -0.4, RZ, 5.5, 'b1');
+  box(M.concrete, -12.6, 9.6, B1, B1 + 1.1, -27.2, -27, 'b1'); // parapet above the B1–B2 ramp
+  stallsAlongX(10.6, BZ1, -12.6, 12.6, B1, 'b1', 'b1');
+  stallsAlongZ(-8.9, -3.9, RZ, -8.2, B1, 'b1', 'b1', -1);
+  stallsAlongZ(-8.9, -3.9, -1, 5.6, B1, 'b1', 'b1', -1);
+  stallsAlongZ(3.9, 8.9, RZ, -8.2, B1, 'b1', 'b1', 1);
+  stallsAlongZ(3.9, 8.9, -1, 5.6, B1, 'b1', 'b1', 1);
+  motoRow(-12.6, 6.6, -27, -23.5, B1, 'b1');
+  for (let z = -15; z < 5; z += 4) box(M.marking, -0.08, 0.08, B1, B1 + 0.012, z, z + 2, 'b1');
+  for (const [x, z] of [[-4.15, -15], [-4.15, -10], [-4.15, 1.5], [4.15, -15], [4.15, -10], [4.15, 1.5], [-7.56, 10.85], [-2.52, 10.85], [2.52, 10.85], [7.56, 10.85]]) {
+    box(M.concrete, x - 0.25, x + 0.25, B1, -0.4, z - 0.25, z + 0.25, 'b1');
+  }
+
+  // ---- B2
+  box(M.bfloor, -12.6, 12.6, B2 - 0.4, B2, BZ0, BZ1, 'b2');
+  stallsAlongX(10.6, BZ1, -12.6, 12.6, B2, 'b2', 'b2');
+  stallsAlongZ(-8.9, -3.9, RZ, -8.2, B2, 'b2', 'b2', -1);
+  stallsAlongZ(-8.9, -3.9, -1, 5.6, B2, 'b2', 'b2', -1);
+  stallsAlongZ(3.9, 8.9, RZ, -8.2, B2, 'b2', 'b2', 1);
+  stallsAlongZ(3.9, 8.9, -1, 5.6, B2, 'b2', 'b2', 1);
+  motoRow(-6.6, 12.6, -27, -23.5, B2, 'b2');
+  box(M.concrete, -6.6, 12.6, B2, B1 - 0.3, -27.2, -27, 'b2');     // wall under the ramp
+  for (const [x0, x1, dx] of [[-12.6, -8.9, -8.9], [8.9, 12.6, 8.86]]) {   // pump room / water tank, STP / electrical
+    box(M.concrete, x0, x1, B2, B1 - 0.3, RZ, 5.5, 'b2');
+    box(M.steel, dx, dx + 0.04, B2, B2 + 2.1, -3.2, -2.0, 'b2');
+    box(M.steel, dx, dx + 0.04, B2, B2 + 2.1, -12.2, -11.0, 'b2');
+  }
+  for (let z = -15; z < 5; z += 4) box(M.marking, -0.08, 0.08, B2, B2 + 0.012, z, z + 2, 'b2');
+  for (const [x, z] of [[-4.15, -15], [-4.15, -10], [-4.15, 1.5], [4.15, -15], [4.15, -10], [4.15, 1.5], [-7.56, 10.85], [-2.52, 10.85], [2.52, 10.85], [7.56, 10.85]]) {
+    box(M.concrete, x - 0.25, x + 0.25, B2, B1 - 0.3, z - 0.25, z + 0.25, 'b2');
+  }
+
+  // ghost massing + ground plane, shown only in the basement cutaway
+  {
+    const lm = new THREE.LineBasicMaterial({ color: 0xf2ead8, transparent: true, opacity: 0.55 });
+    const gb = (x0, x1, y0, y1, z0, z1) => {
+      const l = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(x1 - x0, y1 - y0, z1 - z0)), lm);
+      l.position.set((x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2);
+      groups.ghost.add(l);
+    };
+    gb(-13, 13, 0, 5, -32, 10); gb(-13, 13, 5, DECK, -8.2, 10); gb(-13, -5, 5, DECK, -32, -8.2); gb(5, 13, 5, DECK, -32, -8.2);
+    gb(5.4, 13, 4.6, SKIN_TOP, 7.9, 10.2); gb(0.6, 12.9, 4.3, 4.62, 10, 14.6);
+    const gm = new THREE.MeshBasicMaterial({ color: 0xe8e2d4, transparent: true, opacity: 0.13, depthWrite: false, side: THREE.DoubleSide });
+    for (const [x0, x1, z0, z1] of [[-70, -13, -70, 60], [13, 70, -70, 60], [-13, 13, 16, 60], [-13, 13, -70, -34]]) {
+      const p = new THREE.Mesh(new THREE.PlaneGeometry(x1 - x0, z1 - z0), gm);
+      p.rotation.x = -Math.PI / 2; p.position.set((x0 + x1) / 2, 0, (z0 + z1) / 2);
+      groups.ghost.add(p);
+    }
+    groups.ghost.visible = false;
+  }
 
   /* ---------- context: background trees + distant city ---------- */
   {
@@ -1562,6 +1752,7 @@ function main() {
     M.shop.emissiveIntensity = p.city * 0.4;
     for (const m of rukoFace) m.emissiveIntensity = p.city * 0.5;
     M.water.emissiveIntensity = p.pools * 0.9;
+    if (M.psign) M.psign.emissiveIntensity = 0.15 + p.lamps * 0.12;
     M.ikon.emissiveIntensity = p.lamps * 0.55;
     points.forEach((l) => { l.intensity = p.points; });
     bloom.strength = p.bloomS; bloom.radius = p.bloomR; bloom.threshold = p.bloomT;
@@ -1580,8 +1771,21 @@ function main() {
   /* ---------- camera views ---------- */
   let tween = null;
   const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+  const vis = { skin: true, landscape: true, cut: null };
+  function applyVisibility() {
+    const on = !!vis.cut;
+    groups.building.visible = groups.site.visible = groups.context.visible = !on;
+    groups.skin.visible = !on && vis.skin;
+    groups.landscape.visible = groups.entourage.visible = !on && vis.landscape;
+    groups.ghost.visible = on;
+    groups.b1.visible = vis.cut !== 'b2';
+    renderer.shadowMap.needsUpdate = true;
+  }
   function setView(name, instant) {
     const v = VIEWS[name];
+    vis.cut = name === 'b1' || name === 'b2' ? name : null;
+    applyVisibility();
+    if (vis.cut) setToggle('labels', true);
     $$('[data-view]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === name)));
     const p1 = new THREE.Vector3(...v.pos), q1 = new THREE.Vector3(...v.tgt);
     if (instant || reduceMotion) {
@@ -1604,12 +1808,27 @@ function main() {
     ['', 'Porte-cochère', [12.9, 4.6, 14.6]],
     ['', 'Dinding samping masif', [-13.4, 22, -4]],
     ['', 'Taman dalam', [0, 5.8, -22]],
-    ['', 'Masuk', [-10.2, 0.6, 15.6]],
-    ['', 'Keluar', [10.2, 0.6, 15.6]],
+    ['', 'Masuk', [-6.4, 0.6, 15.6]],
+    ['', 'Keluar', [6.4, 0.6, 15.6]],
+    ['', 'Ramp turun ke basement', [-10.85, 2.8, 8.6]],
+    ['', 'Ramp naik dari basement', [10.85, 2.8, 8.6]],
     ['', 'Panel surya', [-9, 29.4, -20]],
+    ['−3,40', `Basement 1: ${park.b1} mobil`, [0, B1 + 0.3, 8.1], 'b1'],
+    ['', 'Ramp turun dari jalan', [-10.85, B1 + 2.2, -9], 'b1'],
+    ['', 'Ramp naik ke jalan', [10.85, B1 + 2.2, -9], 'b1'],
+    ['', 'Ramp ke B2, dua arah', [2, B1 - 0.8, -30], 'b1'],
+    ['', 'Parkir motor', [-4, B1 + 0.3, -25.2], 'b1'],
+    ['', 'Lift tamu', [7, B1 + 2.4, -4.6], 'b1'],
+    ['', 'Lift servis', [-7, B1 + 2.4, -4.6], 'b1'],
+    ['−6,60', `Basement 2: ${park.b2} mobil`, [0, B2 + 0.3, 8.1], 'b2'],
+    ['', 'Ruang pompa & tandon air', [-10.75, B2 + 3.0, -6], 'b2'],
+    ['', 'STP & panel listrik', [10.75, B2 + 3.0, -6], 'b2'],
+    ['', 'Parkir motor', [4, B2 + 0.3, -25.2], 'b2'],
+    ['', 'Ramp dari B1', [-6, B2 + 1.4, -30], 'b2'],
+    ['', 'Lift tamu', [7, B2 + 2.4, -4.6], 'b2'],
   ];
   const labelLayer = $('#labels');
-  const labelEls = LABELS.map(([lvl, name, pos]) => {
+  const labelEls = LABELS.map(([lvl, name, pos, set = 'above']) => {
     const el = document.createElement('div');
     el.className = 'flabel';
     const span = document.createElement('span');
@@ -1617,15 +1836,15 @@ function main() {
     span.appendChild(document.createTextNode(name));
     el.appendChild(span);
     labelLayer.appendChild(el);
-    return { el, v: new THREE.Vector3(...pos) };
+    return { el, set, v: new THREE.Vector3(...pos) };
   });
   const tmp = new THREE.Vector3();
   function updateLabels() {
     if (labelLayer.hidden) return;
-    const w = stage.clientWidth, h = stage.clientHeight;
+    const w = stage.clientWidth, h = stage.clientHeight, set = vis.cut || 'above';
     for (const L of labelEls) {
       tmp.copy(L.v).project(camera);
-      const off = tmp.z > 1 || Math.abs(tmp.x) > 1.1 || Math.abs(tmp.y) > 1.1;
+      const off = L.set !== set || tmp.z > 1 || Math.abs(tmp.x) > 1.1 || Math.abs(tmp.y) > 1.1;
       L.el.style.display = off ? 'none' : '';
       if (!off) L.el.style.transform = `translate(${((tmp.x + 1) / 2 * w).toFixed(1)}px, ${((1 - tmp.y) / 2 * h).toFixed(1)}px)`;
     }
@@ -1637,12 +1856,15 @@ function main() {
     compassSvg.style.transform = `rotate(${(-a * 180 / Math.PI).toFixed(1)}deg)`;
   }
 
+  const parkText = { b1: park.b1, b2: park.b2, cars: park.b1 + park.b2, moto: park.moto, ratio: ((park.b1 + park.b2) / 134).toFixed(2).replace('.', ',') };
+  $$('[data-park]').forEach((el) => { el.textContent = String(parkText[el.dataset.park]); });
+
   /* ---------- UI wiring ---------- */
   function setToggle(key, on) {
     const btn = $(`[data-toggle="${key}"]`);
     if (btn) btn.setAttribute('aria-pressed', String(on));
-    if (key === 'skin') groups.skin.visible = on;
-    if (key === 'landscape') { groups.landscape.visible = on; groups.entourage.visible = on; }
+    if (key === 'skin') { vis.skin = on; applyVisibility(); }
+    if (key === 'landscape') { vis.landscape = on; applyVisibility(); }
     if (key === 'labels') labelLayer.hidden = !on;
     if (key === 'orbit') controls.autoRotate = on && !reduceMotion;
     renderer.shadowMap.needsUpdate = true;
@@ -1712,7 +1934,7 @@ function main() {
   requestAnimationFrame(loop);
 
   window.IKON = {
-    ready: true, perf,
+    ready: true, perf, park,
     setMode: (m) => setMode(m, true),
     setView: (v) => setView(v, true),
     toggle: setToggle,
