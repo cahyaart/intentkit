@@ -396,6 +396,7 @@ logo_m = (np.abs(hdr - HEADER_BG).max(axis=2) > 18 / 255.0).astype(np.float32)
 logo_m = cv2.dilate(logo_m, np.ones((5, 5), np.uint8))
 logo_m = cv2.GaussianBlur(logo_m, (0, 0), 0.8)
 LOGO_SPLITS = [(0, 217), (217, 348), (348, 607), (607, 810), (810, 1080)]
+HEADER_T0 = 0.45  # first logo starts fading in
 
 
 def draw_header(img, t):
@@ -403,7 +404,7 @@ def draw_header(img, t):
     base = out * (1 - logo_m[..., None]) + HEADER_BG * logo_m[..., None]
     res = base.copy()
     for i, (xa, xb) in enumerate(LOGO_SPLITS):
-        a = ramp(t, 0.45 + 0.22 * i, 1.15 + 0.22 * i)
+        a = ramp(t, HEADER_T0 + 0.22 * i, HEADER_T0 + 0.7 + 0.22 * i)
         if a <= 0:
             continue
         rise = (1 - a) * 12.0
